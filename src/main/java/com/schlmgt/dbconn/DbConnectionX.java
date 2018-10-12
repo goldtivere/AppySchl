@@ -23,23 +23,23 @@ public class DbConnectionX implements Serializable {
 
         try {
 
-//            String dburl = "jdbc:mysql://node36144-schlmgt.atl.jelastic.vps-host.net/schlmgt";
-//            String username = "schlmgt";
-//            String password = "LqVs89ZeZIbQNltB";
-//            Class.forName("com.mysql.jdbc.Driver");
-//            Connection con = DriverManager.getConnection(dburl, username, password);
+            String dburl = "jdbc:mysql://localhost:3306/schlmgt";
+            String username = "root";
+            String password = "Caroline93*";
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = DriverManager.getConnection(dburl, username, password);
 //            Class.forName("com.mysql.jdbc.Driver");
             //Connection con = DriverManager.getConnection("jdbc:mysql://schlmgtuser.cc4ncfbykvkk.us-east-2.rds.amazonaws.com/schlmgt", "schlmgtUser", "rootgold");            
-            if (!(loadPPTfile.isLoadPPtFile())) {
-                setMessangerOfTruth("Cannot load configuration file...");
-                setTestconnection(false);
-                return null;
-            }
-
-            Properties ppt = loadPPTfile.getPptFile();
-            String url = ppt.getProperty("mysql_db_url");
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection(url);
+//            if (!(loadPPTfile.isLoadPPtFile())) {
+//                setMessangerOfTruth("Cannot load configuration file...");
+//                setTestconnection(false);
+//                return null;
+//            }
+//
+//            Properties ppt = loadPPTfile.getPptFile();
+//            String url = ppt.getProperty("mysql_db_url");
+//            Class.forName("com.mysql.jdbc.Driver");
+//            Connection con = DriverManager.getConnection(url);
 
             setTestconnection(true);
 
