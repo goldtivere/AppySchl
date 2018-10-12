@@ -37,7 +37,6 @@ import javax.faces.bean.ViewScoped;
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 import javax.swing.table.TableModel;
-import org.mike.test.ThreadTest;
 import org.primefaces.context.RequestContext;
 import org.primefaces.event.SelectEvent;
 
