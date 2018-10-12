@@ -5,7 +5,7 @@
  */
 package com.schlmgt.profile;
 
-import com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException;
+
 import com.schlmgt.dbconn.DbConnectionX;
 import com.schlmgt.logic.DateManipulation;
 import com.schlmgt.login.UserDetails;
@@ -152,17 +152,13 @@ public class ClassEdit implements Serializable {
             }
 
             return lst;
-        } catch (MySQLSyntaxErrorException e) {
+        } catch (Exception e) {
             setMessangerOfTruth("**Session Expired for this Student. Please select student and try again!!");
             msg = new FacesMessage(FacesMessage.SEVERITY_INFO, getMessangerOfTruth(), getMessangerOfTruth());
             ctx.addMessage(null, msg);
             e.printStackTrace();
             return null;
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-
-        } finally {
+        }  finally {
 
             if (!(con == null)) {
                 con.close();
@@ -206,17 +202,13 @@ public class ClassEdit implements Serializable {
             }
             System.out.println(coun.getCurrentClass() + " now i got you");
             return coun;
-        } catch (MySQLSyntaxErrorException e) {
+        } catch (Exception e) {
             setMessangerOfTruth("Session Expired for this Student. Please select studentzzzz and try again!!");
             msg = new FacesMessage(FacesMessage.SEVERITY_INFO, getMessangerOfTruth(), getMessangerOfTruth());
             ctx.addMessage(null, msg);
             e.printStackTrace();
             return null;
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-
-        } finally {
+        }  finally {
 
             if (!(con == null)) {
                 con.close();

@@ -5,7 +5,7 @@
  */
 package com.schlmgt.register;
 
-import com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException;
+
 import com.schlmgt.dbconn.DbConnectionX;
 import com.schlmgt.imgupload.UploadImagesX;
 import com.schlmgt.logic.AESencrp;
@@ -693,7 +693,7 @@ public class FreshReg implements Serializable {
                 return true;
             }
             return false;
-        } catch (MySQLSyntaxErrorException e) {
+        } catch (Exception e) {
             setMessangerOfTruth("Please click on register and select name of school and registration type to proceed!!");
             msg = new FacesMessage(FacesMessage.SEVERITY_INFO, getMessangerOfTruth(), getMessangerOfTruth());
             context.addMessage(null, msg);

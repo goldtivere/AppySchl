@@ -5,7 +5,7 @@
  */
 package com.schlmgt.profile;
 
-import com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException;
+
 import com.schlmgt.dbconn.DbConnectionX;
 import com.schlmgt.imgupload.UploadImagesX;
 import com.schlmgt.logic.DateManipulation;
@@ -817,15 +817,13 @@ public class EditStudent implements Serializable {
         } catch (NullPointerException e) {
             e.printStackTrace();
 
-        } catch (MySQLSyntaxErrorException e) {
+        } catch (Exception e) {
             setMessangerOfTruth("Sessionsss Expired for this Student. Please select student and try again2!!");
             msg = new FacesMessage(FacesMessage.SEVERITY_INFO, getMessangerOfTruth(), getMessangerOfTruth());
             context.addMessage(null, msg);
             e.printStackTrace();
 
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
+        } 
     }
 
     public int studentNameCheck(String fname, String mname, String lname) throws SQLException {

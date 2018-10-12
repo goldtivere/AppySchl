@@ -5,7 +5,7 @@
  */
 package com.schlmgt.school;
 
-import com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException;
+
 import com.schlmgt.dbconn.DbConnectionX;
 import com.schlmgt.imgupload.UploadImagesX;
 import com.schlmgt.logic.DateManipulation;
@@ -662,14 +662,11 @@ public class SchoolManagement implements Serializable {
             pstmt = con.prepareStatement(studentL);
             pstmt.executeUpdate();
 
-        } catch (MySQLSyntaxErrorException ex) {
+        } catch (Exception ex) {
             setMessangerOfTruth(" Table already exist");
             message = new FacesMessage(FacesMessage.SEVERITY_INFO, getMessangerOfTruth(), getMessangerOfTruth());
             context.addMessage(null, message);
-        } catch (Exception ex) {
-            ex.printStackTrace();
-
-        }
+        } 
     }
 
     public void createSchool(SchoolManagementModel mode, String createdby, int createdId) {

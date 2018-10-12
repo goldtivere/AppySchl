@@ -5,7 +5,7 @@
  */
 package com.schlmgt.profile;
 
-import com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException;
+
 import com.schlmgt.dbconn.DbConnectionX;
 import com.schlmgt.updateResult.ResultModel;
 import java.io.Serializable;
