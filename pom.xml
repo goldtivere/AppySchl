@@ -39,7 +39,7 @@
         </dependency>
         <dependency>
             <groupId>seventeen</groupId>
-            <artifactId>seventeenArt</artifactId>
+            <artifactId>seventeenArtss</artifactId>
             <version>1.0.0</version>
             <type>jar</type>
         </dependency>
